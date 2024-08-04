@@ -20,7 +20,7 @@ struct DessertCell: View {
 			}
 			.frame(width: Constants.dessertCellImageSize.width,
 				   height: Constants.dessertCellImageSize.height,
-				   alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
+				   alignment: .center)
 			.aspectRatio(contentMode: .fit)
 			Spacer()
 			Text(viewModel.name)
