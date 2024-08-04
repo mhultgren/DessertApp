@@ -26,7 +26,6 @@ struct Dessert: Codable, Identifiable {
 		var measurement: String
 	}
 	
-	// TODO: What is happening here exactly?
 	private struct DynamicCodingKeys: CodingKey {
 		var stringValue: String
 		init?(stringValue: String) {
@@ -46,7 +45,6 @@ struct Dessert: Codable, Identifiable {
 		case name = "strMeal"
 	}
 	
-	// TODO: Research more into custom Decodable implementation
 	init(from decoder: Decoder) throws {
 		let container = try decoder.container(keyedBy: CodingKeys.self)
 		let dynamicContainer = try decoder.container(keyedBy: DynamicCodingKeys.self)
